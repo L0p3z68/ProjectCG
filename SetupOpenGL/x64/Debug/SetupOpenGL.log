@@ -1,0 +1,12 @@
+﻿  ObjLoader.cpp
+  SetupOpenGL.cpp
+C:\Users\Tiago\Downloads\SetupOpenGL\SetupOpenGL\SetupOpenGL.cpp(26,111): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\Users\Tiago\Downloads\SetupOpenGL\SetupOpenGL\SetupOpenGL.cpp(26,98): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\Users\Tiago\Downloads\SetupOpenGL\SetupOpenGL\SetupOpenGL.cpp(106,22): warning C4244: 'inicializando': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Tiago\Downloads\SetupOpenGL\SetupOpenGL\SetupOpenGL.cpp(116,19): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Tiago\Downloads\SetupOpenGL\SetupOpenGL\SetupOpenGL.cpp(125,58): warning C4244: 'argumento': conversão de 'Sint32' para 'float', possível perda de dados
+C:\Users\Tiago\Downloads\SetupOpenGL\SetupOpenGL\SetupOpenGL.cpp(125,42): warning C4244: 'argumento': conversão de 'Sint32' para 'float', possível perda de dados
+C:\Users\Tiago\Downloads\SetupOpenGL\SetupOpenGL\SetupOpenGL.cpp(130,42): warning C4244: 'argumento': conversão de 'Sint32' para 'float', possível perda de dados
+C:\Users\Tiago\Downloads\SetupOpenGL\SetupOpenGL\SetupOpenGL.cpp(152,42): warning C4267: 'argumento': conversão de 'size_t' para 'GLsizei', possível perda de dados
+  Gerando Código...
+  SetupOpenGL.vcxproj -> C:\Users\Tiago\Downloads\SetupOpenGL\x64\Debug\SetupOpenGL.exe
