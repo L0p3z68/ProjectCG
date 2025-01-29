@@ -1,18 +1,13 @@
 #version 330 core
+layout (location = 0) in vec4 vertex; // <vec2 position, vec2 texCoords>
 
-in vec3 vertex_position;
-in vec2 vertex_texcoord;
-
-out vec2 vs_texcoord;
+out vec2 TexCoords;
 
 uniform mat4 model;
-uniform mat4 view;
 uniform mat4 projection;
 
 void main()
 {
-//Pass all the values to the fragment shader
-	vs_texcoord = vertex_texcoord;
-
-	gl_Position = projection * view * model * vec4(vertex_position, 1.f);
+    TexCoords = vertex.zw;
+    gl_Position = projection * model * vec4(vertex.xy, 0.0, 1.0);
 }

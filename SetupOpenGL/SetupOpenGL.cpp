@@ -9,6 +9,7 @@
 #include "Shader.h"
 #include "Camera.h"
 #include "ObjLoader.h"
+#include "SpriteRenderer.h"
 
 int main(int argc, char** argv)
 {
@@ -16,7 +17,6 @@ int main(int argc, char** argv)
 	float screenWidth = 800;
 	float screenHeight = 600;
 
-	std::vector<Vertex> mesh = loadOBJ("Tree.obj");
 
 	SDL_Init(SDL_INIT_VIDEO);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
@@ -36,22 +36,8 @@ int main(int argc, char** argv)
 		return -2;
 	}
 
-	GLuint vao;
-	glGenVertexArrays(1, &vao);
-	glBindVertexArray(vao);
-
-	GLuint vbo;
-	glGenBuffers(1, &vbo); // Generate 1 vertex buffer object
-	glBindBuffer(GL_ARRAY_BUFFER, vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * mesh.size(), mesh.data(), GL_STATIC_DRAW);
-
 	Shader shaderProgram("vertex_shader.glsl", "fragment_shader.glsl");
-
-	//stbi_set_flip_vertically_on_load(false);
-
-	GLuint texture;
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
+	SpriteRenderer spriteRenderer(shaderProgram);
 
 	// load and generate the texture
 	int width, height, nrChannels;
@@ -67,11 +53,10 @@ int main(int argc, char** argv)
 	}
 	stbi_image_free(data);
 
-	// set the texture wrapping/filtering options (on the currently bound texture object)
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	Texture2D texture;
+	texture.Generate(10, 20, data);
+
+	spriteRenderer.DrawSprite(texture, glm::vec2(50, 50), glm::vec2(100, 100), 45.0f, glm::vec3(1.0f, 0.0f, 0.0f));
 
 	//Position
 	shaderProgram.setVertexAttribPointer("vertex_position", 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)offsetof(Vertex, position));
@@ -79,23 +64,6 @@ int main(int argc, char** argv)
 	shaderProgram.setVertexAttribPointer("vertex_texcoord", 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)offsetof(Vertex, textcoord));
 
 	glBindVertexArray(0);
-
-	Camera camera(glm::vec3(0.0f, 2.0f, 3.0f), glm::vec3(0.0f, 1.0f, 0.0f), -90.0f, 0.0f);
-
-	glm::mat4 view;
-	view = camera.getViewMatrix();
-
-	glm::mat4 model(1.0f);
-	model = glm::rotate(model, glm::radians(0.f), glm::vec3(1.0, 0.0, 0.0));
-
-	glm::mat4 projection;
-	projection = glm::perspective(glm::radians(camera.getFov()), screenWidth / screenHeight, 0.1f, 100.0f);
-
-	shaderProgram.setMat4("model", model);
-	shaderProgram.setMat4("view", view);
-	shaderProgram.setMat4("projection", projection);
-
-	shaderProgram.setInt("myTexture", texture);
 
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
@@ -120,37 +88,7 @@ int main(int argc, char** argv)
 		{
 			if (event.type == SDL_QUIT) isRunning = false;
 
-			if (event.type == SDL_MOUSEMOTION) 
-			{
-				camera.processMouseInput(event.motion.x, event.motion.y, window);
-			}
-
-			if (event.type == SDL_MOUSEWHEEL) 
-			{
-				camera.processMouseScroll(event.wheel.y);
-			}
 		}
-
-		const Uint8* keyState = SDL_GetKeyboardState(nullptr);
-		camera.processKeyboardInput(keyState, deltaTime);
-
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		//glClear(GL_COLOR_BUFFER_BIT);
-		shaderProgram.use();
-
-		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, texture);
-		glBindVertexArray(vao);
-
-		view = camera.getViewMatrix();
-		projection = glm::perspective(glm::radians(camera.getFov()), screenWidth / screenHeight, 0.1f, 100.0f);
-
-		shaderProgram.setMat4("model", model);
-		shaderProgram.setMat4("view", view);
-		shaderProgram.setMat4("projection", projection);
-
-		glDrawArrays(GL_TRIANGLES, 0, mesh.size());
-
 		SDL_GL_SwapWindow(window);
 	}
 	SDL_GL_DeleteContext(context);

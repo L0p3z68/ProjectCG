@@ -1,14 +1,11 @@
-#version 440
+#version 330 core
+in vec2 TexCoords;
+out vec4 color;
 
-in vec2 vs_texcoord;
-
-out vec4 fs_color;
-
-//Uniforms
-uniform sampler2D myTexture;
-
+uniform sampler2D image;
+uniform vec3 spriteColor;
 
 void main()
-{
-	fs_color = texture(myTexture, vs_texcoord);
+{    
+    color = vec4(spriteColor, 1.0) * texture(image, TexCoords);
 }
