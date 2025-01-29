@@ -1,2 +1,5 @@
-﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo não resolvido, main, referenciado na função "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\Tiago\Downloads\Spriterenderer\x64\Debug\SetupOpenGL.exe : fatal error LNK1120: 1 externo não resolvidos
+﻿  SetupOpenGL.cpp
+C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\SpriteRenderer.h(1,10): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
+C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\SetupOpenGL.cpp(28,111): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\SetupOpenGL.cpp(28,98): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+  SetupOpenGL.vcxproj -> C:\Users\Tiago\Downloads\SpriteRenderer\x64\Debug\SetupOpenGL.exe
