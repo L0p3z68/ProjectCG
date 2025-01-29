@@ -1,8 +1,8 @@
-C:\Users\Tiago\Downloads\SpriteRenderer\Dependencies\glad\src\glad.c;C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\x64\Debug\glad.obj
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\Camera.cpp;C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\x64\Debug\Camera.obj
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\ObjLoader.cpp;C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\x64\Debug\ObjLoader.obj
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\SetupOpenGL.cpp;C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\x64\Debug\SetupOpenGL.obj
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\Shader.cpp;C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\x64\Debug\Shader.obj
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\SpriteRenderer.cpp;C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\x64\Debug\SpriteRenderer.obj
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\stb_image.cpp;C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\x64\Debug\stb_image.obj
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\Texture2D.cpp;C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\x64\Debug\Texture2D.obj
+C:\Users\Tiago\Downloads\Spriterenderer\Dependencies\glad\src\glad.c;C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\x64\Debug\glad.obj
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\Camera.cpp;C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\x64\Debug\Camera.obj
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\ObjLoader.cpp;C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\x64\Debug\ObjLoader.obj
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\SetupOpenGL.cpp;C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\x64\Debug\SetupOpenGL.obj
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\Shader.cpp;C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\x64\Debug\Shader.obj
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\SpriteRenderer.cpp;C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\x64\Debug\SpriteRenderer.obj
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\stb_image.cpp;C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\x64\Debug\stb_image.obj
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\Texture2D.cpp;C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\x64\Debug\Texture2D.obj

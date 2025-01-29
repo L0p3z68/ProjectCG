@@ -1,5 +1,9 @@
 ﻿  SetupOpenGL.cpp
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\SpriteRenderer.h(1,10): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\SetupOpenGL.cpp(28,111): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-C:\Users\Tiago\Downloads\SpriteRenderer\SetupOpenGL\SetupOpenGL.cpp(28,98): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-  SetupOpenGL.vcxproj -> C:\Users\Tiago\Downloads\SpriteRenderer\x64\Debug\SetupOpenGL.exe
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\SpriteRenderer.h(1,10): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\SetupOpenGL.cpp(28,111): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\SetupOpenGL.cpp(28,98): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+  SpriteRenderer.cpp
+C:\Users\Tiago\Downloads\Spriterenderer\SetupOpenGL\SpriteRenderer.h(1,10): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
+  Texture2D.cpp
+  Gerando Código...
+  SetupOpenGL.vcxproj -> C:\Users\Tiago\Downloads\Spriterenderer\x64\Debug\SetupOpenGL.exe
